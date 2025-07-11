@@ -131,6 +131,13 @@ button {
   fill: gray;
 }
 
+.cart-footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
 /* End cart icon styles */
 
 .mission {
