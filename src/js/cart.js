@@ -5,32 +5,33 @@ loadHeaderFooter();
 function renderCartContents() {
   const cartItems = getLocalStorage("so-cart");
 
+  const productList = document.querySelector(".product-list");
+  const cartFooter = document.querySelector(".cart-footer");
+  const totalElement = document.querySelector(".cart-total");
+
   if (!cartItems || cartItems.length === 0) {
-    document.querySelector(".product-list").innerHTML =
-      "<h2>The cart is empty.</h2>";
-    document.querySelector(".cart-footer").classList.add("hide");
+    productList.innerHTML = "<h2>The cart is empty.</h2>";
+    cartFooter.classList.add("hide");
     return;
   }
 
-  const htmlItems = cartItems.map((item) => cartItemTemplate(item));
-  document.querySelector(".product-list").innerHTML = htmlItems.join("");
+  const htmlItems = cartItems.map(cartItemTemplate);
+  productList.innerHTML = htmlItems.join("");
 
   const total = cartItems.reduce(
     (sum, item) => sum + Number(item.FinalPrice),
     0,
   );
 
-  document.querySelector(".cart-total").textContent =
-    `Total: $${total.toFixed(2)}`;
-
-  document.querySelector(".cart-footer").classList.remove("hide");
+  totalElement.textContent = `Total: $${total.toFixed(2)}`;
+  cartFooter.classList.remove("hide");
 }
 
 function cartItemTemplate(item) {
   const newItem = `<li class="cart-card divider">
   <a href="#" class="cart-card__image">
     <img
-      src="${item.Image}"
+      src="${item.Images?.PrimaryMedium || '../images/default.jpg'}"
       alt="${item.Name}"
     />
   </a>
