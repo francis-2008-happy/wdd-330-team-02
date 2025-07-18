@@ -30,12 +30,11 @@ export default class ProductDetails {
 }
 
 function productDetailsTemplate(product) {
-  document.querySelector("h2").textContent = product.Category.charAt(0).toUpperCase() + product.Category.slice(1);
   document.querySelector("#p-brand").textContent = product.Brand.Name;
   document.querySelector("#p-name").textContent = product.NameWithoutBrand;
 
   const productImage = document.querySelector("#p-image");
-  productImage.src = product.Images.PrimaryExtraLarge;
+  productImage.src = product.Images.PrimaryLarge;
   productImage.alt = product.NameWithoutBrand;
   const euroPrice = new Intl.NumberFormat('de-DE',
     {
