@@ -27,6 +27,5 @@ _BYU-Pathway Worldwide improves lives through access to spiritually based, onlin
 
 ---below is the URL to the webpage hosted on Netlify
 https://sleepoutside-wdd-330-team-02.netlify.app/
-https://sleepoutside-wdd-330-team-02.netlify.app/
 
 
