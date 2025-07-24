@@ -33,7 +33,7 @@ function cartItemTemplate(item) {
     <img
       src="${item.Images?.PrimaryMedium || '../images/default.jpg'}"
       alt="${item.Name}"
-    />
+    >
   </a>
   <a href="#">
     <h2 class="card__name">${item.Name}</h2>
