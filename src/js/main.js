@@ -11,5 +11,3 @@ const listElement = document.querySelector(".productlist");
 const productList = new ProductList("tents", dataSource, listElement);
 
 productList.init();
-
-
