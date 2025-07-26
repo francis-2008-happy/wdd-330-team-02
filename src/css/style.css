@@ -115,6 +115,10 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  background-color: #1a252f;
+}
+
 .divider {
   border-bottom: 1px solid var(--primary-color);
 }
@@ -233,6 +237,23 @@ button {
 .products h2 {
   margin-bottom: 1em;
 }
+
+.products .btn-primary {
+  display: block;
+  width: 120px;
+  background-color: #525b0f;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  }
+  
+  .products .btn-primary:hover {
+    background-color: #1a252f;
+  }
+
 
 .product-list {
   display: flex;
@@ -356,6 +377,83 @@ button {
     grid-template-columns: 150px auto 15%;
   }
 }
+
+
+/* checkout styling */
+.checkout-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+fieldset {
+  margin-bottom: 2rem;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 0.5rem;
+}
+
+.field-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.field-grid label {
+  grid-column: span 2;
+  font-weight: 600;
+}
+
+.field-grid input {
+  grid-column: span 2;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.5rem 1rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.summary-total {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.btn-primary {
+  display: block;
+  width: 100%;
+  background-color: #525b0f;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #1a252f;
+}
+
 
 footer {
   font-size: var(--small-font);
