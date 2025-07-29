@@ -139,6 +139,30 @@ button:hover {
   fill: gray;
 }
 
+@keyframes cart-animation {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.2);
+  }
+  60% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.cart-icon {
+  display: inline-block;
+  will-change: transform;
+}
+
+.cart-icon.animate {
+  animation: cart-animation 0.4s ease !important;
+}
+
 /* End cart icon styles */
 
 .mission {
