@@ -52,10 +52,11 @@ export default class CheckoutProcess {
     );
     
     // calculate the total of all the items in the cart
-    this.itemTotal = this.list.reduce((sum, item) => sum + Number(item.FinalPrice || item.price || 0), 0);
+    this.itemTotal = this.list.reduce((sum, item) => sum + (Number(item.FinalPrice || item.price || 0) * (item.quantity || 1)), 0);
 
-    itemNumElement.innerText = this.list.length;
-    
+    const totalItems = this.list.reduce((total, item) => total + (item.quantity || 1), 0);
+
+    itemNumElement.innerText = totalItems;    
     summaryElement.innerText = `$${this.itemTotal.toFixed(2)}`;
   }
 
