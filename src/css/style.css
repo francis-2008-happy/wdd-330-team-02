@@ -418,6 +418,7 @@ fieldset {
 }
 
 legend {
+  color: var(--secondary-color);
   font-weight: bold;
   padding: 0 0.5rem;
 }
@@ -425,21 +426,33 @@ legend {
 .field-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin-top: 1rem;
 }
 
 .field-grid label {
-  grid-column: span 2;
-  font-weight: 600;
+  display: block;
+  padding-top: 1rem;
+  color: var(--tertiary-color);
+  font-size: .9rem;
 }
 
 .field-grid input {
   grid-column: span 2;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
+  padding: 0.75rem;
+  background-color: #eee;
+  display: block;
+  border: 1px solid #999;
   border-radius: 4px;
+  color: #555;
 }
+
+.field-grid input:required {
+  border-left: solid 8px red;
+}
+
+.field-grid input:required:valid {
+  border-left: solid 8px green;
+}
+
 
 .summary-grid {
   display: grid;
